@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: #0F4B84;
+    --secondary: #F0AB3B;
+    --grayBg: #F7F7FB;
+}
+
+.nvb{
+    height: 20px !important;
+    padding:5px ;
+    min-height:40px ;
+}

@@ -3,8 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css'
 import Footer from './Components/Footer';
-import NavBar from './Components/NavBar'
-import NVB from './Components/NVB'
+import NavBar from "./Components/NavBar"
+import ComingSoon from './Pages/ComingSoon';
+import ContactUs from './Pages/ContactUS';
+import Error from './Pages/Error';
 import Home from './Pages/Home'
 
 function App() {
@@ -14,13 +16,14 @@ function App() {
     <>
 
       <BrowserRouter>
-      {/* <NavBar /> */}
-      <NVB />
+        {/* <NavBar /> */}
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/ComingSoon' element={<ComingSoon />} />
+
+          <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
-      <Footer />
     </>
   )
 }

@@ -1,4 +1,4 @@
-import { BsArrowRight , BsFillTelephoneFill ,BsFillEnvelopeFill } from "react-icons/bs";
+import { BsArrowRight , BsFillTelephoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 import { HiLocationMarker } from "react-icons/hi";
 

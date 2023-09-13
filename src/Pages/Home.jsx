@@ -1,111 +1,39 @@
 import Header from "../Components/header";
-import NavBar from "../Components/NVB";
 import Clients from "../Components/OurClients";
 
 import { motion } from "framer-motion";
 
-
-
 import { FaHelmetSafety, FaMedal } from "react-icons/fa6";
 import { HiUserGroup } from "react-icons/hi";
 import { TbBulbFilled } from "react-icons/tb";
-import { GrCertificate } from "react-icons/gr";
 import { PiCertificateFill } from "react-icons/pi";
+import NavBar from "../Components/NavBar";
+import Footer from "../Components/Footer";
 
-const Slides = [
-
-
-    "/Slider/Slider1.png",
-    "/Slider/Slider2.png",
-    "/Slider/Slider3.png",
-    // "/Slider/Unrecognizable2.jpg",
-    // "/Slider/Unrecognizable2.jpg",
-    // "/Slider/Unrecognizable2.jpg",
-    // "/Slider/Unrecognizable2.jpg",
-    // "/Slider/woman-570883_1920.jpg",
-
-]
 
 export default function Home() {
     return (
         <>
-            {/* <NavBar /> */}
-            {/* <div className=''>
-                <div className="carousel ">
-                    <Carousel autoSlide={true} >
-                        {Slides.map((s) => (<img src={s} />))}
-                    </Carousel>
-                </div>
-
+            <div className="">
+                <NavBar />
             </div>
-            <hr />
 
-            <Header /> */}
+            {/* ----------------------------- Section 1 Header -------------------------- */}
+
             <div className="h-full w-full">
                 <Header />
             </div>
 
-            {/* 
-            <figure>
-                <img className="relative mt-40 " src="/Slider/Slider-111.jpg" />
-                <figcaption className="absolute bottom-6"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus ipsum itaque aspernatur sint aliquid pariatur esse quos,\
-                 nisi molestiae! Minus nam fugiat, ea voluptatum quisquam dolores similique sed sequi nisi!</figcaption>
-            </figure>
-
-
-            <figure className="relative w-[100%] h-[100%] mt-20 max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
-                <a href="#">
-                    <img className="" src="/Slider/Slider-111.jpg" alt="image description" />
-                </a>
-                <figcaption className="absolute px-4 text-lg text-white bottom-6">
-                    <p>Do you want to get notified when a new component is added to Flowbite?</p>
-                </figcaption>
-            </figure> */}
             {/* ----------------------------- Section 2 About -------------------------- */}
 
             <motion.div
-                //     variants={{
-                //         hidden :{opacity: 0, y: 70},
-                //         visible : {opacity: 1, y: 0}
-                // }}
-                // initial = "hidden"
-                // animate = "visible"
-                // transition={{ duration: 0.5 , delay: 0.25 }}
-
                 initial={{ y: 70, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-
-                // whileInView={{
-                //     y: 0, opacity: 1,
-                //     scale: [1, 2, 2, 1, 1],
-                //     rotate: [0, 0, 360, 360, 0],
-
-                // }}
                 transition={{ type: "tween", duration: 0.5, delay: 0.25 }}
-
-                // animate={{ x: 100 }}
-                // transition={{
-                //     ease: "linear",
-                //     duration: 2,
-                //     x: { duration: 1 }
-                //   }}
-
-                // whileHover={{ scale: 1.2 }}
-                // whileTap={{ scale: 1.1 }}
-                // drag="x"
-                // dragConstraints={{ left: -100, right: 100 }}
-
-                // animate={{
-                //     scale: [1, 2, 2, 1, 1],
-                //     rotate: [0, 0, 270, 270, 0],
-                //     // borderRadius: ["20%", "20%", "50%", "50%", "20%"],
-                // }}
-
                 className="flex flex-col lg:flex-row md:flex-col lg:w-[50%] lg:mx-[14%] mb-20 mt-20"
                 style={{ background: "url(/BG/AboutSecbgLightOne.jpg)" }}>
                 <div className="">
                     <div className="w-auto lg:w-[500px] p-8 ">
-
                         <span className="text-[--secondary] font-bold text-sm p-2">WHO WE ARE</span>
                         <h2 className="card-title font-bold text-[--primary] text-4xl p-2">About WAS</h2>
                         <hr className="w-20 ml-2 mt-3 border-[1.5px] border-[--secondary]  " />
@@ -119,6 +47,7 @@ export default function Home() {
                     transition={{ type: "tween", duration: 0.5, delay: 0.25 }}
                     src="/Night_truck.JPEG" className=" rounded-none shadow-2xl h-[405px] mt-14 " />
             </motion.div>
+
 
 
             {/* ----------------------------- Section 3 Core  -------------------------- */}
@@ -231,7 +160,10 @@ export default function Home() {
 
             </div>
 
+
+
             {/* ----------------------------- Section 3 Our Recent Works -------------------------- */}
+
             <div className="card flex flex-col rounded-none "
                 style={{ background: "url(/BG/PolarWhiteMarbleSlab.jpg)" }}>
 
@@ -279,7 +211,10 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
+
+
                 {/* -------------------------------- Section 4  ---------------------------- */}
+
                 <div className="card  rounded-none mt-14">
                     <div className="card-body">
                         <motion.h2
@@ -342,127 +277,51 @@ export default function Home() {
                 </div>
 
                 {/* -------------------------------- Section 5  ---------------------------- */}
-                <div className="card mx-auto mt-14">
-                    {/* <h2 className="card-title font-bold text-[--primary] text-4xl mx-auto mt-10 ">Innovative products and solutions</h2> */}
-                    <div className="card lg:card-side rounded-none mb-40">
-                        <div className="card-body mx-auto" >
-                            <motion.h2
-                                initial={{ opacity: 0, y: 75 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1 }}
-                                className="card-title font-bold text-3xl text-[--primary] text-center mx-auto mb-5 ">
-                                Innovative products and solutions</motion.h2>
+                <div className="card mx-auto mt-14 mb-8">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 75 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                        className="card-title font-bold text-3xl text-[--primary] text-center mx-auto mb-5 ">
+                        Innovative products and solutions</motion.h2>
 
-                            <div className="flex flex-col lg:flex-row mx-auto lg:px-40">
-                                <div className="h-44 mt-10">
-                                    <motion.h2
-                                        initial={{ opacity: 0, x: 0 }}
-                                        whileInView={{ opacity: 1, x: -90 }}
-                                        transition={{ duration: 0.50 }}
-                                        className="text-lg font-medium ml-20 lg:ml-0 lg:mt-10 lg:px-8 ">
-                                        We pride ourselves on our ability to provide innovative solutions and develop new products that are
-                                        tailored to meet our clients' specific needs. </motion.h2>
-                                </div>
-                                <motion.img
-                                    initial={{ opacity: 0, x: 0 }}
-                                    whileInView={{ opacity: 1, x: 90 }}
-                                    transition={{ duration: 0.50 }}
-                                    className="w-80 mx-auto mt-[-50px] mr-20 lg:mr-0 lg:mt-0 lg:w-96 lg:h-80" src="public/Panel/panel1.png" />
-                            </div>
+                    <div className="card lg:card-side w-[80%] mx-auto lg:gap-20">
+                        <div className="card-body lg:w-1/2">
+                            <motion.p
+                                initial={{ opacity: 0, x: 90 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.50 }}
+                                className="text-lg w-96 lg:w-full font-medium lg:mt-20 ">
+                                We pride ourselves on our ability to provide innovative solutions and develop new products that are
+                                tailored to meet our clients' specific needs.</motion.p>
+                        </div>
+                        <figure>
+                            <motion.img
+                                initial={{ opacity: 0, x: -90 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.50 }}
+                                src="public/Panel/panel1.png" className="w-72 h-60 lg:w-full lg:h-80" alt="Album" /></figure>
+                    </div>
 
 
-                            <div className="flex flex-col lg:flex-row mx-auto lg:gap- lg:px-40 ">
-                                <motion.img
-                                    initial={{ opacity: 0, x: 0 }}
-                                    whileInView={{ opacity: 1, x: -90 }}
-                                    transition={{ duration: 0.50 }}
-                                    className="h-60 mx-auto lg:w-96 lg:h-80 " src="public/Panel/panel2.png" />
-                                <div className="h-44 mr-20 lg:mr-0 lg:mt-16">
-                                    <motion.h2
-                                        initial={{ opacity: 0, x: 0 }}
-                                        whileInView={{ opacity: 1, x: 90 }}
-                                        transition={{ duration: 0.50 }}
-                                        className=" text-lg font-medium  mt-7 lg:px-8">
-                                        We understand that every client is unique, and we believe in going above and beyond to deliver 
-                                        creative and cutting-edge solutions that address their challenges</motion.h2>
-                                </div>
-
-                            </div>
+                    <div className="card lg:card-side w-[80%] mx-auto lg:gap-20">
+                        <figure>
+                            <motion.img
+                                initial={{ opacity: 0, x: 90 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.50 }}
+                                src="public/Panel/panel2.png" className="w-80 h-60 lg:w-full lg:h-72" alt="Album" /></figure>
+                        <div className="card-body w-full lg:w-1/2">
+                            <motion.p
+                                initial={{ opacity: 0, x: -90 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.50 }}
+                                className="text-lg w-96 lg:w-full font-medium lg:mt-20 "> We understand that every client is unique, and we believe in going above and beyond to deliver
+                                creative and cutting-edge solutions that address their challenges</motion.p>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <div>
-
-
-
-                {/* --------------------------------------------------
-<div className="card lg:card-side rounded-none mb-40">
-                        <div className="card-body mx-auto" >
-                            <h2 className="card-title font-bold text-4xl text-[--primary] text-center mx-auto mb-5 ">Innovative products and solutions</h2>
-
-                            <div className="flex flex-row mx-auto gap-40 px-20">
-                                <div className="bg-white rounded-2xl shadow-xl h-44 mt-10">
-                                    <h2 className="card-title mt-10 px-8 text-center ">We pride ourselves on our ability to provide innovative solutions and develop new products that are tailored to meet our clients' specific needs. </h2>
-                                </div>
-                                <img className="w-96 h-80" src="public/Panel/panel1.png" />
-                            </div>
-
-
-                            <div className="flex flex-row mx-auto gap-40 px-20 ">
-                                <img className="w-96 h-80 " src="public/Panel/panel2.png" />
-                                <div className="bg-white rounded-2xl shadow-xl h-44 mt-16">
-                                    <h2 className=" card-title text-center mt-7 px-8">We understand that every client is unique, and we believe in going above and beyond to deliver creative and cutting-edge solutions that address their challenges</h2>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-------------------------------------------
-                    <div className="flex flex-col md:flex-row md:gap-5 lg:flex-row lg:gap-32 mb-10 ">
-
-                        <div className="card w-96 glass mt-10 shadow-lg hover:scale-110 transform-gpu transition-transform duration-300 cursor-pointer">
-                            <figure className="bg-[--grayBg] h-72"><img className="w-80 h-80 px-3" src="public/Panel/panel1.png" /></figure>
-                            <div className="card-body bg-white ">
-                                <h2 className="text-lg py-3 text-center">We pride ourselves on our ability to provide innovative solutions and develop new products that are tailored to meet our clients' specific needs. </h2>
-                            </div>
-                        </div>
-
-                        <div className="card w-96 glass mt-10 shadow-lg hover:scale-110 transform-gpu transition-transform duration-300 cursor-pointer">
-                            <figure className="bg-[--grayBg] h-72"><img className="w-80 px-3" src="public/Panel/panel2.png" /></figure>
-                            <div className="card-body lg:h-20 bg-white ">
-                                <h2 className="text-lg py-3 text-center lg:mt-[-10px]">We understand that every client is unique, and we believe in going above and beyond to deliver creative and cutting-edge solutions that address their challenges</h2>
-                            </div>
-                        </div>
-                    </div>
------------------------------- 
-                <h2 className="card-title font-bold text-4xl text-center mx-auto mb-5 ">Innovative products and solutions</h2>
-
-                <div className="w-[75%]  mx-auto ">
-                    <div className="card lg:card-side bg-[--grayBg] shadow-xl  ">
-                        <figure className="w-full"><img className="w-96 h-80" src="public/Panel/panel1.png" /></figure>
-                        <div className="card-body ">
-                            <h2 className="card-title mt-20 ">We pride ourselves on our ability to provide innovative solutions and develop new products that are tailored to meet our clients' specific needs. </h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="w-[75%]  mx-auto mt-14">
-                    <div className="card lg:card-side bg-[--grayBg] shadow-xl  ">
-                        <div className="card-body ">
-                            <h2 className="card-title mt-16 w-[95%] ">We understand that every client is unique, and we believe in going above and beyond to deliver creative and cutting-edge solutions that address their challenges</h2>
-                        </div>
-                        <figure className="w-full mr-10"><img className="w-96" src="public/Panel/panel2.png" /></figure>
-                    </div>
-                </div> */}
-
-            </div>
-
-            {/* ----------------------------------------------؟ */}
-
 
 
             {/* ----------------------------- Section  Clients -------------------------- */}
@@ -471,8 +330,9 @@ export default function Home() {
                 style={{ background: "url(/BG/clienetsbg.png)" }}>
                 <h2 className="card-title font-bold text-[--primary] text-4xl mx-auto mt-32 mb-14">Our Success Partners</h2>
                 <Clients />
-
             </div>
+
+            <Footer />
 
         </>
     )

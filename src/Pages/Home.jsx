@@ -1,27 +1,20 @@
-import Header from "../Components/header";
-import Clients from "../Components/OurClients";
-
 import { motion } from "framer-motion";
+import Clients from "../Components/OurClients";
+import Slider from "../Components/Slider";
+import OurCore from "../Components/OurCore";
 
 import { FaHelmetSafety, FaMedal } from "react-icons/fa6";
 import { HiUserGroup } from "react-icons/hi";
-import { TbBulbFilled } from "react-icons/tb";
-import { PiCertificateFill } from "react-icons/pi";
-import NavBar from "../Components/NavBar";
-import Footer from "../Components/Footer";
 
 
 export default function Home() {
+
     return (
         <>
-            <div className="">
-                <NavBar />
-            </div>
-
-            {/* ----------------------------- Section 1 Header -------------------------- */}
+            {/* ----------------------------- Section 1 Slider -------------------------- */}
 
             <div className="h-full w-full">
-                <Header />
+                <Slider />
             </div>
 
             {/* ----------------------------- Section 2 About -------------------------- */}
@@ -30,6 +23,7 @@ export default function Home() {
                 initial={{ y: 70, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 transition={{ type: "tween", duration: 0.5, delay: 0.25 }}
+                viewport={{ once: true }}
                 className="flex flex-col lg:flex-row md:flex-col lg:w-[50%] lg:mx-[14%] mb-20 mt-20"
                 style={{ background: "url(/BG/AboutSecbgLightOne.jpg)" }}>
                 <div className="">
@@ -45,6 +39,7 @@ export default function Home() {
                     initial={{ y: 70, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ type: "tween", duration: 0.5, delay: 0.25 }}
+                    viewport={{ once: true }}
                     src="/Night_truck.JPEG" className=" rounded-none shadow-2xl h-[405px] mt-14 " />
             </motion.div>
 
@@ -55,88 +50,30 @@ export default function Home() {
             <div className="card flex flex-col rounded-none mb- w-full "
                 style={{ background: "url(/BG/HugeDomains_com2.jpg)" }}>
 
-                <div className="card flex flex-col  lg:flex-row w-full " >
 
-                    <div className="card flex flex-col lg:flex-row md:flex-row md:gap-5 md:w-auto">
+
+                <div className="card flex flex-col lg:flex-row w-full " >
+
+                    <div className="card flex flex-col lg:flex-row md:flex-row md:gap-5 mx-14 md:w-auto">
 
                         <div className="card lg:mx-10 my-20 mx-auto">
 
-                            <motion.div
-                                initial={{ opacity: 0, y: 75 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false }}
-                                whileHover={{ scale: 1.1 }}
-                                className="card-body w-80  h-52 bg-white text-black p-5 my-5 border-2 border-r-transparent border-l-[--secondary] border-y-[--secondary] hover:bg-[--secondary] hover:text-white cursor-pointer hover:border-l-black hover:border-y-black transition-all hover:duration-[0.5s]  ">
-                                <div className="flex items-start gap-2 ">
-                                    <FaHelmetSafety className="w-10 h-10 " />
-                                    <h2 className="card-title font-bold text-2xl">Safety</h2>
-                                </div>
-                                <hr className="w-20 mt-1 border-[2px] border-[--secondary] mb-2 " />
-                                <p>Oil and gas operations can be hazardous, so prioritizing safety measures and training is essential to protect employees and customers.</p>
-                            </motion.div>
+                            <OurCore title={"Safety"} content={"Oil and gas operations can be hazardous, so prioritizing safety measures and training is essential to protect employees and customers."} TagName={<FaHelmetSafety className="w-10 h-10 " />} />
+                            <OurCore title={"Quality"} content={"Manufacturing or renovating reliable, high-quality equipment is crucial for building trust with customers and ensuring long-term success."} TagName={<FaMedal className="w-10 h-10" />} />
+                            <OurCore title={"Teamwork"} content={"Oil and gas operations often require collaboration between different departments and teams, so fostering a culture of teamwork and communication can help ensure success."} TagName={<HiUserGroup className="w-12 h-10" />} />
 
-                            <motion.div
-                                initial={{ opacity: 0, y: 75 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false }}
-                                whileHover={{ scale: 1.1 }}
-                                className="card-body w-80  h-52 bg-white text-black p-5 my-5 border-2 border-r-transparent border-l-[--secondary] border-y-[--secondary] hover:bg-[--secondary] hover:text-white cursor-pointer hover:border-l-black hover:border-y-black transition-all hover:duration-[0.5s] ">
-                                <div className="flex items-start gap-2">
-                                    <FaMedal className="w-10 h-10" />
-                                    <h2 className="card-title font-bold text-2xl ">Quality</h2>
-                                </div>
-                                <hr className="w-20 mt-1 border-[2px] border-[--secondary] mb-2 " />
-                                <p>Manufacturing or renovating reliable, high-quality equipment is crucial for building trust with customers and ensuring long-term success.</p>
-                            </motion.div>
-
-                            <motion.div
-                                initial={{ opacity: 0, y: 75 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false }}
-                                whileHover={{ scale: 1.1 }}
-                                className="card-body w-80  h- bg-white text-black p-5 my-5 border-2 border-r-transparent border-l-[--secondary] border-y-[--secondary] hover:bg-[--secondary] hover:text-white cursor-pointer hover:border-l-black hover:border-y-black transition-all hover:duration-[0.5s] ">
-                                <div className="flex items-start gap-2">
-                                    <HiUserGroup className="w-12 h-10" />
-                                    <h2 className="card-title font-bold text-2xl mt-2">Teamwork</h2>
-                                </div>
-                                <hr className="w-20 mt-1 border-[2px] border-[--secondary] mb-1 " />
-                                <p>Oil and gas operations often require collaboration between different departments and teams, so fostering a culture of teamwork and communication can help ensure success.</p>
-                            </motion.div>
                         </div>
 
                         {/* ------------------------------- */}
 
                         <div className="card h-96 mx-auto mt-[-60px] lg:my-44 md:mt-60">
+                            <OurCore title={"Innovation"} content={"Developing new technologies and techniques can help improve the effectiveness and efficiency of wireline and slickline operations."} TagName={<HiUserGroup className="w-12 h-10" />} />
+                            <OurCore title={"Customer Satisfaction"} content={"Providing excellent customer service and support can help build long-term relationships with clients and lead to repeat business."} TagName={<HiUserGroup className="w-12 h-10" />} />
 
-                            <motion.div
-                                initial={{ opacity: 0, y: 75 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false }}
-                                whileHover={{ scale: 1.1 }}
-                                className="card-body w-80  h-52 bg-white text-black  p-5 lg:my-5 lg:mx-10 border-2 border-r-transparent border-l-[--secondary] border-y-[--secondary] hover:bg-[--secondary] hover:text-white cursor-pointer hover:border-l-black hover:border-y-black transition-all hover:duration-[0.5s] ">
-                                <div className="flex items-start gap-2">
-                                    <TbBulbFilled className="w-12 h-12 " />
-                                    <h2 className="card-title font-bold text-2xl mt-2">Innovation</h2>
-                                </div>
-                                <hr className="w-20 mt-1 border-[2px] border-[--secondary]  " />
-                                <p>Developing new technologies and techniques can help improve the effectiveness and efficiency of wireline and slickline operations.</p>
-                            </motion.div>
-
-                            <motion.div
-                                initial={{ opacity: 0, y: 75 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: false }}
-                                whileHover={{ scale: 1.1 }}
-                                className="card-body w-80  h-60 bg-white text-black  p-5 my-10 lg:mx-10 border-2 border-r-transparent border-l-[--secondary] border-y-[--secondary] hover:bg-[--secondary] hover:text-white cursor-pointer hover:border-l-black hover:border-y-black transition-all hover:duration-[0.5s] ">
-                                <div className="flex items-start gap-2">
-                                    <PiCertificateFill className="w-14 h-14 mt- " />
-                                    <h2 className="card-title font-bold text-2xl mt-3">Customer Satisfaction </h2>
-                                </div>
-                                <hr className="w-20 mt-1 border-[2px] border-[--secondary]  " />
-                                <p>Manufacturing or renovating reliable, high-quality equipment is crucial for building trust with customers and ensuring long-term success.</p>
-                            </motion.div>
                         </div>
                     </div>
+
+                    {/* ------------------------------------------ */}
 
                     <div className="card flex flex-col mx-auto mt-32 md:mt-[-60px] lg:mt-60 ">
                         <div className="card-body  ">
@@ -145,6 +82,7 @@ export default function Home() {
                                 initial={{ opacity: 0, x: 18 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1 }}
+                                viewport={{ once: true }}
                                 className="card-title font-bold text-[--primary] text-3xl mb-3">
                                 Our Core Values for Industry Leadership.</motion.h2>
                             <hr className="w-20 border-[1.5px] border-[--secondary]  " />
@@ -152,6 +90,7 @@ export default function Home() {
                                 initial={{ opacity: 0, x: 18 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1 }}
+                                viewport={{ once: true }}
                                 src="/Slider/Slider1.png" className="w-96 h-96 mt-[-40px] mx-auto" />
                         </div>
                     </div>
@@ -165,7 +104,7 @@ export default function Home() {
             {/* ----------------------------- Section 3 Our Recent Works -------------------------- */}
 
             <div className="card flex flex-col rounded-none "
-                style={{ background: "url(/BG/PolarWhiteMarbleSlab.jpg)" }}>
+            >
 
                 <div className="card rounded-none">
                     <div className="card-body">
@@ -173,7 +112,7 @@ export default function Home() {
                             initial={{ opacity: 0, y: 75 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1 }}
-
+                            viewport={{ once: true }}
                             className="card-title font-bold text-[--primary] text-3xl mx-auto text-center mb-3 mt-14">
                             Unleashing power of rebuilt equipment</motion.h2>
 
@@ -181,6 +120,7 @@ export default function Home() {
                             initial={{ opacity: 0, y: 75 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1 }}
+                            viewport={{ once: true }}
                             className="text-lg w-[90%] mx-auto text-center mb-8">
                             At our company, we unleash the power of rebuilt equipment by revitalizing your old machinery, restoring it to its former glory with exceptional operational performance and a visually stunning appearance.Trust us to bring your old equipment back to life, unlocking its true potential and exceeding your expectations.</motion.p>
                         <div className="flex flex-col mx-auto">
@@ -188,9 +128,9 @@ export default function Home() {
                                 initial={{ opacity: 0, x: 75 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1 }}
-
+                                viewport={{ once: true }}
                                 className="flex ">
-                                <figure><img className="w-96 " src="public/before_After/Enos6_before.jpeg" /></figure>
+                                <figure><img className="w-96 " src="/before_After/Enos6_before.jpeg" /></figure>
                                 <div className="ml-5 lg:ml-16 mt-28 h-16 border-l-4 border-[--secondary]">
                                     <h2 className="card-title text-3xl font-bold text-[--primary] text-center mt-3 ml-2">Before</h2>
                                 </div>
@@ -200,11 +140,12 @@ export default function Home() {
                                 initial={{ opacity: 0, x: -75 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1 }}
+                                viewport={{ once: true }}
                                 className="flex lg:ml-48">
                                 <div className="ml-5 lg:ml-16 mt-28 h-16 border-l-4 border-[--secondary]">
                                     <h2 className="card-title text-3xl font-bold text-[--primary] text-center mr-5 lg:mr-16 mt-3 ml-2">After</h2>
                                 </div>
-                                <figure><img className="w-96 mt-5" src="public/before_After/Enos_6_After.JPEG" /></figure>
+                                <figure><img className="w-96 mt-5" src="/before_After/Enos_6_After.JPEG" /></figure>
 
                             </motion.div>
 
@@ -221,6 +162,7 @@ export default function Home() {
                             initial={{ opacity: 0, y: 75 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1 }}
+                            viewport={{ once: true }}
                             className="card-title font-bold text-[--primary] text-3xl text-center mx-auto mb-3">
                             We Design , We don't Assemble
                         </motion.h2>
@@ -229,6 +171,7 @@ export default function Home() {
                             initial={{ opacity: 0, y: 75 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1 }}
+                            viewport={{ once: true }}
                             className="text-lg text-center lg:px-10 mx-auto lg:w-[90%] ">
                             we pride ourselves on our design-driven approach. We don't simply assemble equipment we meticulously design every unit from the ground up. Each piece is crafted based on our genuine,
                             innovative designs, ensuring that every component seamlessly integrates to deliver exceptional  performance quality and innovation.</motion.p>
@@ -239,6 +182,7 @@ export default function Home() {
                                     initial={{ opacity: 0, x: -90 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.50 }}
+                                    viewport={{ once: true }}
                                     src="/Grid/grid5.jpeg" />
                             </div>
                             <div className="hover:scale-105 lg:hover:scale-110 transform-gpu transition-transform duration-300 cursor-pointer">
@@ -246,6 +190,7 @@ export default function Home() {
                                     initial={{ opacity: 0, y: 90 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.50 }}
+                                    viewport={{ once: true }}
                                     className="h-full"
                                     src="/Grid/grid3.png" />
                             </div>
@@ -254,6 +199,7 @@ export default function Home() {
                                     initial={{ opacity: 0, x: 90 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.50 }}
+                                    viewport={{ once: true }}
                                     className="h-full "
                                     src="/Grid/grid4.jpeg" />
                             </div>
@@ -262,6 +208,7 @@ export default function Home() {
                                     initial={{ opacity: 0, x: -90 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.50 }}
+                                    viewport={{ once: true }}
                                     src="/Grid/grid22.png" />
                             </div>
                             <div className="hover:scale-105 lg:hover:scale-110 transform-gpu transition-transform duration-300 cursor-pointer">
@@ -269,6 +216,7 @@ export default function Home() {
                                     initial={{ opacity: 0, x: 90 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.50 }}
+                                    viewport={{ once: true }}
                                     className="h-full"
                                     src="/Grid/grid1.jpg" />
                             </div>
@@ -277,21 +225,31 @@ export default function Home() {
                 </div>
 
                 {/* -------------------------------- Section 5  ---------------------------- */}
-                <div className="card mx-auto mt-14 mb-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 75 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    viewport={{ once: true }}
+                    className="card mx-auto mt-14 mb-8 rounded-none"
+                    style={{ background: "url(/BG/PolarWhiteMarbleSlab.jpg)" }}>
+
                     <motion.h2
                         initial={{ opacity: 0, y: 75 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1 }}
-                        className="card-title font-bold text-3xl text-[--primary] text-center mx-auto mb-5 ">
-                        Innovative products and solutions</motion.h2>
+                        viewport={{ once: true }}
+                        className="card-title font-bold text-[--primary] text-3xl mx-auto text-center mb-3 mt-14">
+                        Innovative products  and solutions
+                    </motion.h2>
 
-                    <div className="card lg:card-side w-[80%] mx-auto lg:gap-20">
+                    <div className="card lg:card-side lg:w-[80%] mx-auto lg:gap-20">
                         <div className="card-body lg:w-1/2">
                             <motion.p
                                 initial={{ opacity: 0, x: 90 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.50 }}
-                                className="text-lg w-96 lg:w-full font-medium lg:mt-20 ">
+                                viewport={{ once: true }}
+                                className="text-lg lg:w-full font-medium lg:mt-20 ">
                                 We pride ourselves on our ability to provide innovative solutions and develop new products that are
                                 tailored to meet our clients' specific needs.</motion.p>
                         </div>
@@ -300,39 +258,43 @@ export default function Home() {
                                 initial={{ opacity: 0, x: -90 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.50 }}
-                                src="public/Panel/panel1.png" className="w-72 h-60 lg:w-full lg:h-80" alt="Album" /></figure>
+                                viewport={{ once: true }}
+                                src="/Panel/panel1.png" className="w-72 h-60 lg:w-full mt-[-40px] md:mt-0  lg:mt-0 lg:h-80" alt="Album" />
+                                </figure>
                     </div>
 
-
-                    <div className="card lg:card-side w-[80%] mx-auto lg:gap-20">
+                    <div className="card lg:card-side lg:w-[80%] mx-auto lg:gap-20">
                         <figure>
                             <motion.img
-                                initial={{ opacity: 0, x: 90 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.50 }}
-                                src="public/Panel/panel2.png" className="w-80 h-60 lg:w-full lg:h-72" alt="Album" /></figure>
-                        <div className="card-body w-full lg:w-1/2">
-                            <motion.p
                                 initial={{ opacity: 0, x: -90 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.50 }}
-                                className="text-lg w-96 lg:w-full font-medium lg:mt-20 "> We understand that every client is unique, and we believe in going above and beyond to deliver
+                                viewport={{ once: true }}
+                                src="/Panel/panel2.png" className="w-72 h-60 lg:w-full lg:h-80" alt="Album" />
+                        </figure>
+                        <div className="card-body lg:w-1/2">
+                            <motion.p
+                                initial={{ opacity: 0, x: 90 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.50 }}
+                                viewport={{ once: true }}
+                                className="text-lg lg:w-full font-medium lg:mt-20 mt-[-20px] ">
+                                We understand that every client is unique, and we believe in going above and beyond to deliver
                                 creative and cutting-edge solutions that address their challenges</motion.p>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
 
             {/* ----------------------------- Section  Clients -------------------------- */}
 
-            <div className="flex flex-col mt-10 mb-10 h-[450px] mx-auto"
+            <div className="flex flex-col mt-10 mb-24 h-[450px] mx-auto"
                 style={{ background: "url(/BG/clienetsbg.png)" }}>
                 <h2 className="card-title font-bold text-[--primary] text-4xl mx-auto mt-32 mb-14">Our Success Partners</h2>
                 <Clients />
             </div>
 
-            <Footer />
 
         </>
     )

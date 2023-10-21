@@ -1,26 +1,28 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './App.css'
-import Footer from './Components/Footer';
-import NavBar from "./Components/NavBar"
 import ComingSoon from './Pages/ComingSoon';
 import ContactUs from './Pages/ContactUS';
 import Error from './Pages/Error';
 import Home from './Pages/Home'
+import About from './Pages/About';
+import Layout from './Pages/Layout';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
 
       <BrowserRouter>
-        {/* <NavBar /> */}
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/ComingSoon' element={<ComingSoon />} />
+          <Route element={<Layout />}>
+            <Route path='/' element={<Home />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<ContactUs />} />
 
+            <Route path='/ComingSoon' element={<ComingSoon />} />
+          </Route>
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>

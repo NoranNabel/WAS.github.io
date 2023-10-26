@@ -1,4 +1,4 @@
-import React, {useState } from 'react';
+import React, { useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
 import { AiTwotonePhone } from 'react-icons/ai';
@@ -8,12 +8,15 @@ import { HiLocationMarker } from 'react-icons/hi';
 
 const NavBar = (props) => {
 
-    const {navbar} = props;
+    const { navbar } = props;
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [dropDowen, setDropDowen] = useState(false);
+
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+        
     };
 
 
@@ -60,19 +63,18 @@ const NavBar = (props) => {
                 </div>
             </nav>
 
-            <nav className={`fixed transition-all duration-[0.5s] ease-in-out  
+            <nav className={`fixed transition-all duration-[0.5s] ease-in-out mt-[-4px]   
                       ${navbar ? " z-50 w-full bg-white text-black shadow-md"
                     : " z-10 w-full bg-transparent md:mt-10 lg:mt-10 text-white "}`}>
 
-                <div className="w-full mx-auto px-4 sm:px-6 lg:px-5">
+                <div className="w-full mx-auto sm:px-6 lg:px-5">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center">
-                            <div className="flex-shrink-0">
+                            <Link to=""><div className="flex-shrink-0">
                                 {navbar ? <img className="w-32 cursor-pointer" src="/WasLogo.png" /> : <img className="w-32 cursor-pointer" src="/WasLogoW.png" />}
-                            </div>
+                            </div></Link>
                         </div>
-                        <div className="hidden sm:block">
-
+                        <div className="hidden sm:block ">
                             <div className="ml-4 flex flex-wrap items-center">
                                 <div className="flex-grow"></div>
                                 <NavLink
@@ -109,80 +111,37 @@ const NavBar = (props) => {
                                 </NavLink>
                             </div>
                         </div>
+
                         <div className=" sm:ml-6 sm:block md:hidden lg:hidden ">
-                            <div className="flex items-center">
-                                <button
-                                    onClick={toggleMenu}
-                                    className={`p-1 hover:ease-out duration-[0.5s] ${navbar ? "text-[--primary] hover:text-[--secondary]" : "text-white hover:text-[--secondary]"}`}
-                                >
-                                    <span className="sr-only">Open main menu</span>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="h-6 w-6"
-                                        fill="none"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                        aria-hidden="true"
-                                    >
-                                        {isMenuOpen ? (
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M6 18L18 6M6 6l12 12"
-                                            />
-                                        ) : (
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth={2}
-                                                d="M4 6h16M4 12h16M4 18h16"
-                                            />
-                                        )}
-                                    </svg>
-                                </button>
+                            <div className="flex items-end">
+                                <div className="dropdown dropdown-end text-black">
+                                    <label tabIndex={0} className="btn btn-ghost btn-circle">
+                                        <button
+                                            className={`p-1 hover:ease-out duration-[0.5s] ${navbar ? "text-[--primary] hover:text-[--secondary]" : "text-white hover:text-[--secondary]"}`}
+                                        >
+                                            <span className="sr-only">Open main menu</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+                                            </svg>
+                                        </button>
+                                    </label>
+                                        <ul tabIndex={0} className="menu menu-md dropdown-content mt-3 shadow bg-base-100 w-screen px-5">
+                                            <li><Link to="/" className='hover:bg-transparent hover:text-[--secondary]'>Home</Link></li>
+                                            <li><Link to="/ComingSoon" className='hover:bg-transparent hover:text-[--secondary]'>Products & Services</Link></li>
+                                            <li><Link to="/ComingSoon" className='hover:bg-transparent hover:text-[--secondary]'>Track Record</Link></li>
+                                            <li><Link to="/about" className='hover:bg-transparent hover:text-[--secondary]'>About</Link></li>
+                                            <li><Link to="/contact" className='hover:bg-transparent hover:text-[--secondary]'>Contact</Link></li>
+                                        </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {isMenuOpen && (
-                    <div className="sm:hidden h-auto bg-white text-black w-full border-t-2 ">
-                        <div className="px-2 pt-2 pb-3 space-y-1">
-                            <NavLink
-                                to="/"
-                                className="hover:text-[--secondary] block px-3 py-2 rounded-md text-base font-medium"
-                            >
-                                Home
-                            </NavLink>
-                            <NavLink
-                                to="/ComingSoon"
-                                className="hover:text-[--secondary] block px-3 py-2 rounded-md text-base font-medium"
-                            >
-                                Products & Services
-                            </NavLink>
-                            <NavLink
-                                to="/ComingSoon"
-                                className="hover:text-[--secondary] block px-3 py-2 rounded-md text-base font-medium"
-                            >
-                                Track Record
-                            </NavLink>
-                            <NavLink
-                                to="/about"
-                                className="hover:text-[--secondary] block px-3 py-2 rounded-md text-base font-medium"
-                            >
-                                About
-                            </NavLink>
-                            <NavLink
-                                to="/contact"
-                                className="hover:text-[--secondary] block px-3 py-2 rounded-md text-base font-medium"
-                            >
-                                Contact
-                            </NavLink>
-                        </div>
-                    </div>
-                )}
             </nav>
+           
+
+
         </>
     );
 };

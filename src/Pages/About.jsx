@@ -9,14 +9,14 @@ function About() {
 
 
             <motion.div
-                initial={{ opacity: 0, x: 75 }}
+                initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
                 className="card lg:card-side bg-base-100 rounded-none px-5 mt-20">
                 <figure className="mx-8"><img src="/BG/IMG_5421.jpg" alt="Album" /></figure>
                 <motion.div
-                    initial={{ opacity: 0, y: 75 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}
@@ -30,13 +30,13 @@ function About() {
             </motion.div>
 
             <motion.div
-                initial={{ opacity: 0, x: -75 }}
+                initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
                 className="card lg:card-side bg-base-100 rounded-none lg:mt-5 px-5 mb-20">
                 <motion.div
-                    initial={{ opacity: 0, y: 75 }}
+                    initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                     viewport={{ once: true }}

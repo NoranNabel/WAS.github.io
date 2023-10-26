@@ -11,10 +11,11 @@ export default function Footer() {
         <>
             <footer className="footer p-10 bg-base-200 text-base-content ">
                 <div>
-                    <img className="w-48 mt-[-20px] cursor-pointer" src="/WasLogo.png" />
+                    <Link to="/"><img className="w-48 mt-[-20px] cursor-pointer" src="/WasLogo.png" /></Link>
                     <p className="p-2  w-72">© 2023 - All right reserved by WAS - Wireline Advanced Solution </p>
                 </div>
-                <div>
+
+                <div className="mt-[-20px]  lg:mt-0">
                     <span className="footer-title text-black opacity-80" >Quick Links</span>
                     <hr className="w-20 opacity-80 border-[1.5px] border-[--secondary]  " />
                     <div className="flex flex-row gap-2">
@@ -27,12 +28,12 @@ export default function Footer() {
                     </div>
                     <div className="flex flex-row gap-2">
                         <BsArrowRight className="mt-1 fill-[--secondary]" />
-                        <Link to="/contact" className="link link-hover">Contact Us</Link>
+                        <Link to="/contact" className="link link-hover">Contact</Link>
                     </div>
                 </div>
 
 
-                <div>
+                <div className="mt-[-20px]  lg:mt-0">
                     <span className="footer-title text-black opacity-80">Our Services </span>
                     <hr className="w-20 opacity-80 border-[1.5px] border-[--secondary]  " />
                     <div className="flex flex-row gap-2">
@@ -44,12 +45,12 @@ export default function Footer() {
                         <Link to="/ComingSoon" className="link link-hover">Track Record </Link>
                     </div>
                 </div>
-                <div className=" ">
-                    <div className="flex flex-row gap-2 mb-3">
-                        <BsFillTelephoneFill className="mt-1 " />
+                <div className="mt-[-20px]  lg:mt-0">
+                    <div className="flex flex-row gap-2 lg:mb-3">
+                        <BsFillTelephoneFill className="mt-1" />
                         <a className="link link-hover">+1-813-817-7737 </a>
                     </div>
-                    <div className="flex flex-row gap-2 mb-3">
+                    <div className="flex flex-row gap-2 lg:mb-3">
                         <GrMail className="mt-1 w-5 h-4" />
                         <a href="https://mail.google.com/mail/u/0/#search/Sales%40WasUs.Us?compose=new" className="link link-hover"> Sales@WasUs.Us </a>
                     </div>

@@ -54,7 +54,7 @@ export default function Home() {
 
                 <div className="card flex flex-col lg:flex-row w-full " >
 
-                    <div className="card flex flex-col lg:flex-row md:flex-row md:gap-5 mx-14 md:w-auto">
+                    <div className="card flex flex-col lg:flex-row md:flex-row md:gap-5 lg:mx-14 md:w-auto">
 
                         <div className="card lg:mx-10 my-20 mx-auto">
 
@@ -75,7 +75,7 @@ export default function Home() {
 
                     {/* ------------------------------------------ */}
 
-                    <div className="card flex flex-col mx-auto mt-32 md:mt-[-60px] lg:mt-60 ">
+                    <div className="card flex flex-col mx-auto mt-36 md:mt-[-60px] lg:mt-60 ">
                         <div className="card-body  ">
                             <span className="text-[--secondary] font-bold text-sm ">WHY CHOOSE US</span>
                             <motion.h2
@@ -125,7 +125,7 @@ export default function Home() {
                             At our company, we unleash the power of rebuilt equipment by revitalizing your old machinery, restoring it to its former glory with exceptional operational performance and a visually stunning appearance.Trust us to bring your old equipment back to life, unlocking its true potential and exceeding your expectations.</motion.p>
                         <div className="flex flex-col mx-auto">
                             <motion.div
-                                initial={{ opacity: 0, x: 75 }}
+                                initial={{ opacity: 0, x: 30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1 }}
                                 viewport={{ once: true }}
@@ -137,7 +137,7 @@ export default function Home() {
                             </motion.div>
 
                             <motion.div
-                                initial={{ opacity: 0, x: -75 }}
+                                initial={{ opacity: 0, x: -30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1 }}
                                 viewport={{ once: true }}
@@ -179,7 +179,7 @@ export default function Home() {
                         <div className="grid grid-flow-row-dense grid-cols-3 gap-1 lg:gap-5 lg:w-[80%] mx-auto mt-8 ">
                             <div className="hover:scale-105 lg:hover:scale-110 transform-gpu transition-transform duration-300 cursor-pointer">
                                 <motion.img
-                                    initial={{ opacity: 0, x: -90 }}
+                                    initial={{ opacity: 0, x: -40 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.50 }}
                                     viewport={{ once: true }}
@@ -187,38 +187,36 @@ export default function Home() {
                             </div>
                             <div className="hover:scale-105 lg:hover:scale-110 transform-gpu transition-transform duration-300 cursor-pointer">
                                 <motion.img
-                                    initial={{ opacity: 0, y: 90 }}
+                                    initial={{ opacity: 0, y: 40 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.50 }}
                                     viewport={{ once: true }}
-                                    className="h-full"
-                                    src="/Grid/grid3.png" />
+                                    src="/Grid/grid33.jpg" />
                             </div>
                             <div className="hover:scale-105 lg:hover:scale-110 transform-gpu transition-transform duration-300 cursor-pointer">
                                 <motion.img
-                                    initial={{ opacity: 0, x: 90 }}
+                                    initial={{ opacity: 0, x: 30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.50 }}
                                     viewport={{ once: true }}
-                                    className="h-full "
-                                    src="/Grid/grid4.jpeg" />
+                                    src="/Grid/grid44.jpg" />
                             </div>
                             <div className="col-span-2 hover:scale-105 transform-gpu transition-transform duration-300 cursor-pointer">
                                 <motion.img
-                                    initial={{ opacity: 0, x: -90 }}
+                                    initial={{ opacity: 0, x: -40 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.50 }}
                                     viewport={{ once: true }}
                                     src="/Grid/grid22.png" />
                             </div>
-                            <div className="hover:scale-105 lg:hover:scale-110 transform-gpu transition-transform duration-300 cursor-pointer">
+                            <div className="hover:scale-105 lg:hover:scale-115 transform-gpu transition-transform duration-300 cursor-pointer">
                                 <motion.img
-                                    initial={{ opacity: 0, x: 90 }}
+                                    initial={{ opacity: 0, x: 30 }}
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.50 }}
                                     viewport={{ once: true }}
-                                    className="h-full"
-                                    src="/Grid/grid1.jpg" />
+                                    src="/Grid/grid11.jpg"
+                                    />
                             </div>
                         </div>
                     </div>
@@ -245,7 +243,7 @@ export default function Home() {
                     <div className="card lg:card-side lg:w-[80%] mx-auto lg:gap-20">
                         <div className="card-body lg:w-1/2">
                             <motion.p
-                                initial={{ opacity: 0, x: 90 }}
+                                initial={{ opacity: 0, x: 30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.50 }}
                                 viewport={{ once: true }}
@@ -255,7 +253,7 @@ export default function Home() {
                         </div>
                         <figure>
                             <motion.img
-                                initial={{ opacity: 0, x: -90 }}
+                                initial={{ opacity: 0, x: -40 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.50 }}
                                 viewport={{ once: true }}
@@ -266,7 +264,7 @@ export default function Home() {
                     <div className="card lg:card-side lg:w-[80%] mx-auto lg:gap-20">
                         <figure>
                             <motion.img
-                                initial={{ opacity: 0, x: -90 }}
+                                initial={{ opacity: 0, x: -40 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.50 }}
                                 viewport={{ once: true }}
@@ -274,7 +272,7 @@ export default function Home() {
                         </figure>
                         <div className="card-body lg:w-1/2">
                             <motion.p
-                                initial={{ opacity: 0, x: 90 }}
+                                initial={{ opacity: 0, x: 30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.50 }}
                                 viewport={{ once: true }}

@@ -33,7 +33,7 @@ const Slider = () => {
                 responsive={responsive}
                 infinite={true}
                 autoPlay={true}
-                autoPlaySpeed={5000}
+                autoPlaySpeed={3000}
                 containerClass="carousel-container"
             >
 
